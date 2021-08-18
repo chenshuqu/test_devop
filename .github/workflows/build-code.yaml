@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out master code
-        uses: actions/checkout@master
+        uses: actions/checkout@main
       - run: mkdir build && cd build && cmake .. && make
       - run: ./main
