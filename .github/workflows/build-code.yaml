@@ -4,7 +4,9 @@ jobs:
   build-code-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out master code
-        uses: actions/checkout@main
+      - run: apt update 
+            && apt install build-essential -y
+            && apt install cmake -y
+            && apt install make -y
       - run: mkdir build && cd build && cmake .. && make
       - run: ./main
