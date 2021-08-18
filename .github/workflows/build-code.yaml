@@ -1,0 +1,10 @@
+name: build master code
+on: [push]
+jobs:
+  build-code-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out master code
+        uses: actions/checkout@master
+      - run: mkdir build && cd build && cmake .. && make
+      - run: ./main
