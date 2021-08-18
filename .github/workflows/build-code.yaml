@@ -1,9 +1,10 @@
-name: build master code
+name: cmake-build
 on: [push]
 jobs:
-  build-code-actions:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: sudo apt update 
             && sudo apt install build-essential -y
             && sudo apt install cmake -y
