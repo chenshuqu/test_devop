@@ -8,5 +8,6 @@ jobs:
             && sudo apt install build-essential -y
             && sudo apt install cmake -y
             && sudo apt install make -y
-      - run: mkdir build && cd build && cmake .. && make
+      - run: pwd
+      - run: mkdir -p build && cd build && cmake .. && make
       - run: ./main
