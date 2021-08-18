@@ -9,5 +9,6 @@ jobs:
             && sudo apt install cmake -y
             && sudo apt install make -y
       - run: pwd
+      - run: ls -a
       - run: mkdir -p build && cd build && cmake .. && make
       - run: ./main
